@@ -1,0 +1,156 @@
+body {
+  margin: 0;
+  font-family: Arial;
+}
+
+/* Follow button */
+.btn {
+  background: #548bfa;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  padding: 5px 15px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Strong */
+strong {
+  color: #2b2b2b;
+}
+
+/* Profile header*/
+.profile-header {
+  display: grid;
+  grid-template-columns: minmax(100px, 200px) minmax(250px, 500px);
+  justify-content: center;
+  margin: 50px;
+}
+
+/* Profile picture */
+.profile-picture {
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile-picture img {
+  width: 100%;
+  border-radius: 100%;
+}
+
+/* Profile description */
+.profile-description {
+  text-align: center;
+  color: #2c2c2c;
+}
+
+.profile-name {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+.profile-name button {
+  margin-left: 15px;
+}
+
+.profile-description strong {
+  margin-right: 5px;
+}
+
+.profile-analitycs span {
+  margin-right: 8px;
+}
+
+.profile-analitycs strong {
+  margin-right: 0;
+}
+
+/* Post list */
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(100px, 299px));
+  justify-content: center;
+  grid-gap: 28px;
+}
+
+/* Post */
+.post {
+  cursor: pointer;
+  position: relative;
+  display: block;
+}
+
+/* Post image */
+.post-image {
+  margin: 0;
+}
+
+.post-image img {
+  width: 100%;
+  vertical-align: top;
+}
+
+/* Post comments and likes */
+.post-overlay {
+  background: rgba(117, 116, 116, 0.5);
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+
+.post:hover .post-overlay {
+  display: flex;
+}
+
+.post-likes, .post-comments {
+  width: 80px;
+  margin: 5px;
+  font-weight: bold;
+  display: inline-block;
+}
+
+@media screen and (max-width: 785px) {
+  .profile-name {
+    font-size: 30px;
+  }
+
+  .profile-description {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .post-list {
+    grid-gap: 3px;
+  }
+}
+
+@media screen and (max-width: 545px) {
+  .profile-analitycs {
+    display: none;
+  }
+
+  .profile-name {
+    font-size: 25px;
+  }
+
+  .profile-name button {
+    margin: 0;
+  }
+
+  .profile-description {
+    font-size: 15px;
+  }
+}
